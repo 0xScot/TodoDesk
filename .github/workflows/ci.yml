@@ -1,0 +1,22 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build-and-test:
+    runs-on: macos-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Run tests
+        run: make test
+
+      - name: Build app
+        run: make app
+
+      - name: Verify app bundle signature
+        run: codesign --verify --deep --strict --verbose=4 .build/TodoDesk.app

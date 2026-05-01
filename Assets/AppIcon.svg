@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="bg" x1="160" y1="100" x2="850" y2="920" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1B2A34"/>
+      <stop offset="0.55" stop-color="#243F46"/>
+      <stop offset="1" stop-color="#142026"/>
+    </linearGradient>
+    <linearGradient id="sheet" x1="260" y1="230" x2="760" y2="820" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F6FAF7"/>
+      <stop offset="1" stop-color="#DCE8E1"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="28" stdDeviation="34" flood-color="#071014" flood-opacity="0.38"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="1024" height="1024" rx="232" fill="url(#bg)"/>
+  <circle cx="758" cy="202" r="64" fill="#7DD3B0" opacity="0.95"/>
+  <path d="M180 764 C300 824 427 854 560 848 C690 842 790 806 856 742" fill="none" stroke="#7DD3B0" stroke-width="28" stroke-linecap="round" opacity="0.22"/>
+
+  <g filter="url(#shadow)">
+    <rect x="250" y="214" width="524" height="632" rx="72" fill="url(#sheet)"/>
+    <rect x="318" y="310" width="388" height="86" rx="31" fill="#FFFFFF"/>
+    <rect x="318" y="468" width="388" height="86" rx="31" fill="#FFFFFF"/>
+    <rect x="318" y="626" width="388" height="86" rx="31" fill="#FFFFFF"/>
+
+    <circle cx="362" cy="353" r="22" fill="#2F6F63"/>
+    <path d="M350 354 L360 365 L379 340" fill="none" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <circle cx="362" cy="511" r="22" fill="#C4D0C8"/>
+    <circle cx="362" cy="669" r="22" fill="#C4D0C8"/>
+
+    <rect x="410" y="336" width="224" height="22" rx="11" fill="#2A3A3B" opacity="0.82"/>
+    <rect x="410" y="494" width="250" height="22" rx="11" fill="#2A3A3B" opacity="0.62"/>
+    <rect x="410" y="652" width="188" height="22" rx="11" fill="#2A3A3B" opacity="0.62"/>
+
+    <path d="M410 511 H664" stroke="#9AA7A0" stroke-width="14" stroke-linecap="round" opacity="0.8"/>
+  </g>
+</svg>
