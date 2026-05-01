@@ -74,6 +74,13 @@ This is useful when you want to try the app without touching your real task data
 make test
 ```
 
+## Contributing And Agents
+
+- Read `CONTRIBUTING.md` for setup, pull request, and data-safety guidance.
+- Read `AGENTS.md` before using coding agents on this repo.
+- Read `docs/ARCHITECTURE.md` for module boundaries and data flow.
+- Read `docs/QA.md` for the release and manual QA checklist.
+
 ## Packaging
 
 ```bash
