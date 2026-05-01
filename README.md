@@ -1,5 +1,7 @@
 # TodoDesk
 
+[![CI](https://github.com/0xScot/TodoDesk/actions/workflows/ci.yml/badge.svg)](https://github.com/0xScot/TodoDesk/actions/workflows/ci.yml)
+
 TodoDesk is a lightweight native macOS todo app built with AppKit and Objective-C. It is local-first, has no account requirement, and stores tasks as JSON on your Mac.
 
 The interface text is currently Traditional Chinese.
@@ -73,6 +75,8 @@ This is useful when you want to try the app without touching your real task data
 ```bash
 make test
 ```
+
+GitHub Actions runs the same core test, app build, code-sign verification, and plist validation on macOS for pushes and pull requests.
 
 ## Contributing And Agents
 

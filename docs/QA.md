@@ -4,6 +4,8 @@ Use this checklist before publishing changes or telling someone the app is ready
 
 ## Automated Checks
 
+GitHub Actions runs the automated CI checklist on pushes to `main`, pull requests, and manual dispatches.
+
 ```bash
 git status --short --branch
 make test
@@ -87,5 +89,4 @@ Confirm:
 ## Known Limits
 
 - The app is ad-hoc signed for local use, not notarized for public binary distribution.
-- There is no GitHub Actions workflow yet because the setup token did not have `workflow` scope.
 - UI tests are manual for now; core rules are covered by the standalone test binary.

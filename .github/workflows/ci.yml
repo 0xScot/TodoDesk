@@ -1,0 +1,43 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  macos:
+    name: Test and build TodoDesk
+    runs-on: macos-15
+    timeout-minutes: 15
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Show toolchain
+        run: |
+          sw_vers
+          xcode-select -p
+          clang --version
+
+      - name: Run core tests
+        run: make test
+
+      - name: Build app bundle
+        run: make app
+
+      - name: Verify app signature
+        run: codesign --verify --deep --strict --verbose=4 .build/TodoDesk.app
+
+      - name: Validate app plist
+        run: plutil -lint .build/TodoDesk.app/Contents/Info.plist

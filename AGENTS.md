@@ -78,7 +78,7 @@ Do not commit:
 
 ## GitHub Notes
 
-The repository is public on GitHub. GitHub Actions workflow files are intentionally absent because the current GitHub token used during setup did not have `workflow` scope. Issue templates are safe to edit. To add CI later, re-authenticate with workflow permission, then add `.github/workflows/ci.yml`.
+The repository is public on GitHub. GitHub Actions CI lives at `.github/workflows/ci.yml` and runs `make test`, `make app`, strict code-sign verification, and `plutil` validation on macOS.
 
 ## Release Checklist
 
